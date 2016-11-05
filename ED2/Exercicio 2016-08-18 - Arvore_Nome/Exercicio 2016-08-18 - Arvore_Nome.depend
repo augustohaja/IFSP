@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1472171831 source:c:\linguagemc\exercicio 2016-08-18 - arvore_nome\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1472171831 source:d:\git\c\exercicio 2016-08-18 - arvore_nome\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
