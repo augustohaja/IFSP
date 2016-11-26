@@ -11,6 +11,7 @@
 		
 		<!-- Todas as entidades -->
 		<class>br.edu.ifsp.regesc.models.Student</class>
+		<class>br.edu.ifsp.regesc.models.Curso</class>
 		
 		<!-- Propriedades JDBC -->
 		<properties>

@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Student {
@@ -15,6 +16,9 @@ public class Student {
     private String name;
     private int age;
     private String city;
+    
+    @ManyToOne
+    private Curso curso;
 
     public Student() {
     	this.id = -1;
@@ -51,11 +55,25 @@ public class Student {
         this.age = age;
     }
 
-    @Override
+
+    public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public Curso getCurso() {
+		return curso;
+	}
+
+	public void setCurso(Curso curso) {
+		this.curso = curso;
+	}
+
+	@Override
     public String toString() {
         return "Student{" + "id=" + id + ", name=" + name + ", age=" + age + '}';
     }
-    
-    
-    
-}
+ }

@@ -1,5 +1,6 @@
 package br.edu.ifsp.regesc.app;
 
+import br.edu.ifsp.regesc.controllers.VBoxAppController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

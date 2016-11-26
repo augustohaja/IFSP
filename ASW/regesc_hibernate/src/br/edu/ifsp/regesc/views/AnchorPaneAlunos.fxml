@@ -12,8 +12,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.101" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifsp.regesc.controllers.AnchorPaneAlunosController">
+<AnchorPane fx:id="anchorPaneAlunos" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifsp.regesc.controllers.AnchorPaneAlunosController">
    <children>
       <SplitPane dividerPositions="0.6515679442508711" layoutX="292.0" layoutY="176.0" orientation="VERTICAL" prefHeight="576.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
@@ -87,6 +86,7 @@
                         <Button fx:id="buttonApagar" layoutX="148.0" mnemonicParsing="false" onAction="#handleButtonApagar" text="Apagar" />
                      </children>
                   </Group>
+                  <Button fx:id="buttonVoltar" layoutX="647.0" layoutY="156.0" mnemonicParsing="false" onAction="#handleButtonVoltar" text="Voltar" />
                </children>
             </AnchorPane>
         </items>

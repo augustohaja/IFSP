@@ -2,7 +2,6 @@ package br.edu.ifsp.regesc.controllers;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.ResourceBundle;
@@ -45,7 +44,12 @@ public class AnchorPaneAlunosController implements Initializable {
 	private Button buttonEditar;
 	@FXML
 	private Button buttonApagar;
+	@FXML
+	private Button buttonVoltar;
+	@FXML
+	private AnchorPane anchorPaneAlunos;
 	
+	private VBoxAppController appController;
 	
 	private List<Student> studentList;
 	private ObservableList<Student> studentObservableList;
@@ -144,6 +148,17 @@ public class AnchorPaneAlunosController implements Initializable {
 		}
 	}
 
+	@FXML
+	public void handleButtonVoltar() {
+		System.out.println("Fechando...");
+		//AnchorPane ap = (AnchorPane) FXMLLoader.load(getClass().getResource("/br/edu/ifsp/regesc/views/AnchorPaneAlunos.fxml"));
+		//this.anchorPane.getChildren().setAll(ap);
+		//this.anchorPaneAlunos.toBack();
+		//this.anchorPaneAlunos.getParent();
+	
+		appController.getAnchorPane().getChildren().setAll(new AnchorPane());
+		
+	}
 	
 
 	public boolean showAnchorPaneCadastroAlunosDialog(Student student) throws IOException {
@@ -163,6 +178,10 @@ public class AnchorPaneAlunosController implements Initializable {
 		dialogStage.showAndWait();
 		
 		return controller.isButtonConfirmarClicked();
+	}
+	
+	public void setAppController(VBoxAppController a){
+		this.appController = a;
 	}
 }
 

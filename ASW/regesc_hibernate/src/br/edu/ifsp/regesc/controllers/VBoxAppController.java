@@ -37,10 +37,23 @@ public class VBoxAppController implements Initializable {
 	@FXML
 	public void handleMenuCadastroAlunos() throws IOException {
 		System.out.println("*****************************");
-		AnchorPane ap = (AnchorPane) FXMLLoader.load(getClass().getResource("/br/edu/ifsp/regesc/views/AnchorPaneAlunos.fxml"));
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(getClass().getResource("/br/edu/ifsp/regesc/views/AnchorPaneAlunos.fxml"));
+		AnchorPane ap = (AnchorPane) loader.load();
+		AnchorPaneAlunosController alunosController = (AnchorPaneAlunosController)loader.getController();
+		
+		alunosController.setAppController(this);
+		
 		this.anchorPane.getChildren().setAll(ap);
 	}
 
+	public AnchorPane getAnchorPane(){
+		return this.anchorPane;
+	}
+	
+	public void setAnchorPane(AnchorPane a){
+		this.anchorPane = a;
+	}
 }
 
 
